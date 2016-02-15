@@ -1,0 +1,21 @@
+.wrapper {
+    margin-top: 40px;
+}
+.math-operation button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 15px;
+}
+input {
+    margin: 10px;
+}
+button#clear {
+    margin: 10px;
+}
+div.content-main {
+    width: 400px;
+}
+div.wrapper {
+    width: 100%;
+    align-content: center;
+}

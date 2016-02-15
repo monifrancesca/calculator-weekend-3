@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator - Weekend 3</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="text/javascript" src="./vendors/jquery.min.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h3>Do Some Math</h3>
+    </div>
+    <div class="wrapper text-center">
+        <div class="content-main">
+            <form id="value-form" class="form-vertical">
+                <label for="firstValue" class="control-label">1st Value</label>
+                <input type="text" class="form-control" id="firstValue" name="firstValue" />
+
+                <label for="secondValue" class="control-label">2nd Value</label>
+                <input type="text" class="form-control" id="secondValue" name="secondValue" />
+
+                <div class="mathOperators">
+                    <button name="add" class="add">+</button>
+                    <button name="subtract" class="subtract">-</button>
+                    <button name="multiply" class="multiply">x</button>
+                    <button name="divide" class="divide">/</button>
+                </div>
+
+                <div class="form-actions">
+                    <button id="post-data">Submit</button>
+                    <button id="clear" class="btn-primary">Clear</button>
+                </div>
+                <div class="show">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- make an object with text fields and button on the dom: { x: 3, y: 4, type: "Add" } -->
