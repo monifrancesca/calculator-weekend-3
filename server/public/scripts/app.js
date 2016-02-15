@@ -97,7 +97,7 @@ function clickPostData() {
 
 }
 
-// function to append employee info to the DOM
+// function to append numbers to the DOM
 function appendDom(showEquation) {
     // select a holding container that already exists. Put in an empty div tag.
     $('.show').append('<div></div>');
