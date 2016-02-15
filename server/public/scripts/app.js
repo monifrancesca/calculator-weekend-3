@@ -1,9 +1,8 @@
 $(document).ready(function() {
     $('#post-data').on('click', clickPostData);
+    //click on one of the buttons in the div with the mathOperator class
     $('.mathOperators').on('click', 'button', whichButtonValue);
     //$('#get-data').on('click', clickGetData);
-
-
 
 
 
@@ -23,7 +22,6 @@ if (button class === add) {
     type = divide;
 }
 
-
 // or switch? and where does this logic go?
 switch(type) {
     case: add
@@ -39,12 +37,14 @@ switch(type) {
         type = divide;
         break;
 }
-
 */
 
+// working on a function that attaches a type to the math operation buttons,
+// then appends to the numbers object
 function whichButtonValue(buttonName) {
     event.preventDefault();
-    //iterate through the buttons in the div with class mathOperators
+    // iterate through the buttons in the div with class mathOperators?
+    // assign a math operation to type?
     for (var i = 0; i < 4; i++) {
         $('.mathOperators');
 
@@ -69,8 +69,6 @@ function whichButtonValue(buttonName) {
     }
 }
 
-
-
 function clickPostData() {
     event.preventDefault();
     $.each($('#value-form').serializeArray(), function(i, field) {
@@ -80,7 +78,8 @@ function clickPostData() {
     // call to the function that writes to the DOM
     appendDom(values);
 
-    $('.form-vertical').find('input[type=text]').val(''); // add to clear button function
+    // clear out the input fields
+    $('.form-vertical').find('input[type=text]').val(''); // Gwen recommended adding to clear button function? This seems to be working from here.
 
     $.ajax({
         type: 'POST',
@@ -94,14 +93,14 @@ function clickPostData() {
             console.log(data);
         }
     });
-
 }
 
-// function to append numbers to the DOM
+// append numbers to the DOM
 function appendDom(showEquation) {
     // select a holding container that already exists. Put in an empty div tag.
     $('.show').append('<div></div>');
     // Select that container and have it grab it's last child and store it into the $el variable.
+    // This works, but I'm not sure I understand why we're grabbing last child?
     var $el = $('.show').children().last();
 
     // numbers object appended to the DOM
@@ -110,7 +109,7 @@ function appendDom(showEquation) {
     $el.append('<p><strong>Type: </strong>' + showEquation.type + '</p>');
 }
 
-// not sure if we'll need this
+// not sure if we need to GET data
 function clickGetData() {
     event.preventDefault();
     $.ajax({
